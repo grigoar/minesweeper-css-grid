@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+
+.container {
+  width: 102rem;
+  height: 100vh;
+  background-color: #eee;
+  margin: 3rem auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 5rem 1fr 7rem;
+      grid-template-rows: 5rem 1fr 7rem;
+}
+
+header {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+footer {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 4rem;
+}

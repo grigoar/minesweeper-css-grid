@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  //   background-color: orangered;
+  font-size: 1.6rem;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+.container {
+  width: 102rem;
+  height: 100vh;
+  background-color: #eee;
+  margin: 3rem auto;
+
+  display: grid;
+  grid-template-rows: 5rem 1fr 7rem;
+  //   grid-template-columns: 100px 100px;
+}
+
+header {
+  //   display: grid;
+  justify-self: center;
+  align-self: flex-start;
+  //   align-self: center;
+}
+
+footer {
+  justify-self: center;
+  align-self: flex-end;
+  margin-bottom: 4rem;
+}
