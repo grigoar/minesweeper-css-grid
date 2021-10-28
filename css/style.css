@@ -33,10 +33,73 @@ header {
       align-self: flex-start;
 }
 
+.main-container {
+  width: 50rem;
+  margin: 0 auto;
+}
+
+.difficulty {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.difficulty h2 {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.difficulty--btns {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.difficulty--btns button {
+  background-color: #2ea1eb;
+  border-radius: 0.5rem;
+  border: none;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.difficulty--btns_easy:hover, .difficulty--btns_easy.active {
+  background-color: #37e5af;
+}
+
+.difficulty--btns_medium:hover, .difficulty--btns_medium.active {
+  background-color: #ffe23a;
+}
+
+.difficulty--btns_hard:hover, .difficulty--btns_hard.active {
+  background-color: #ff597a;
+}
+
 footer {
   -ms-grid-column-align: center;
       justify-self: center;
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-bottom: 4rem;
+}
+
+.canvas {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+#minesweeper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  height: 20rem;
+  width: 20rem;
 }

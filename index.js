@@ -13,30 +13,46 @@ h1.addEventListener("click", (e) => {
 });
 
 btnEasy.addEventListener("click", (e) => {
-  console.log("this is the easy mode");
-  let gridHtml = gridBuild(6);
-  //   let gridCell = `<div>Cell${1}</div>`;
-  minesweeperGrid.innerHTML = gridHtml;
+  minesweeperGrid.innerHTML = gridBuild(5);
+  activeClass(e);
 });
 
 btnMedium.addEventListener("click", (e) => {
-  console.log("this is the medium mode");
-  let gridHtml = gridBuild(12);
-  minesweeperGrid.innerHTML = gridHtml;
+  let gridHtml = gridBuild(8);
+  minesweeperGrid.innerHTML = gridBuild(8);
+  activeClass(e);
 });
 
 btnHard.addEventListener("click", (e) => {
-  console.log("this is the hard mode");
-  let gridHtml = gridBuild(22);
-  minesweeperGrid.innerHTML = gridHtml;
+  let gridHtml = gridBuild(10);
+  minesweeperGrid.innerHTML = gridBuild(10);
+  activeClass(e);
 });
 
-const gridBuild = (nrCells) => {
-  let gridCell = `<div>Cell${1}</div>`;
+const gridBuild = (colCount) => {
+  let gridCell = `<button>&nbsp</button>`;
   let gridCells = ``;
-  for (let i = 0; i < nrCells; i++) {
+
+  const styles = {
+    "grid-template-columns": `repeat(${colCount}, 1fr)`,
+    "grid-template-rows": `repeat(${colCount}, 1fr)`,
+    height: `${colCount * 40}px`,
+    width: `${colCount * 40}px`,
+  };
+  // minesweeperGrid.style.gridTemplateColumns = "1fr ".repeat(colCount);
+  // minesweeperGrid.style.gridTemplateRows = "1fr ".repeat(colCount);
+  Object.assign(minesweeperGrid.style, styles);
+  for (let i = 0; i < colCount * colCount; i++) {
     gridCells += gridCell;
   }
-  console.log(gridCells);
+  // console.log(gridCells);
   return gridCells;
+};
+
+const activeClass = (e) => {
+  let buttons = document.querySelector(".active");
+  if (buttons !== null) {
+    buttons.classList.remove("active");
+  }
+  e.target.className += " active";
 };

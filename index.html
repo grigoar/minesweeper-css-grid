@@ -2,22 +2,33 @@
 
 <html>
   <head>
+    <title>Minesweeper Grid</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
 
   <body>
     <div class="container">
       <header>
-        <h1 class="head-text">Minesweeper</h1>
+        <h1 class="head-text">Minesweeper Mockup Grid</h1>
       </header>
 
       <main>
-        <h2>Select the difficulty</h2>
-        <button id="easy">Easy</button>
-        <button id="medium">Medium</button>
-        <button id="hard">Hard</button>
+        <div class="main-container">
+          <div class="difficulty">
+            <h2>Select the difficulty:</h2>
+            <div class="difficulty--btns">
+              <button class="difficulty--btns_easy" id="easy">Easy</button>
+              <button class="difficulty--btns_medium" id="medium">
+                Medium
+              </button>
+              <button class="difficulty--btns_hard" id="hard">Hard</button>
+            </div>
+          </div>
 
-        <div id="minesweeper"></div>
+          <div class="canvas">
+            <div id="minesweeper"></div>
+          </div>
+        </div>
       </main>
 
       <footer>Copyright © 2021 by grigoar. All rights reserved.</footer>

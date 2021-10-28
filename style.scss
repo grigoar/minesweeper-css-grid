@@ -30,8 +30,73 @@ header {
   //   align-self: center;
 }
 
+main {
+  // display: grid;
+
+  // justify-content: center;
+  // align-items: center;
+}
+
+.main-container {
+  width: 50rem;
+  margin: 0 auto;
+}
+
+.difficulty {
+  display: grid;
+  // grid-template-columns: 1fr 1fr;
+  // justify-self: center;
+  justify-content: center;
+  h2 {
+    justify-self: center;
+  }
+  &--btns {
+    justify-self: center;
+    // align-self: center;
+
+    button {
+      background-color: #2ea1eb;
+      border-radius: 0.5rem;
+      border: none;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      letter-spacing: 0.1rem;
+      transition: all 200ms ease-in-out;
+    }
+
+    &_easy:hover,
+    &_easy.active {
+      background-color: #37e5af;
+    }
+    &_medium:hover,
+    &_medium.active {
+      background-color: #ffe23a;
+    }
+    &_hard:hover,
+    &_hard.active {
+      background-color: #ff597a;
+    }
+  }
+}
+
 footer {
   justify-self: center;
   align-self: flex-end;
   margin-bottom: 4rem;
+}
+.canvas {
+  display: grid;
+  width: 100%;
+  margin-top: 2rem;
+}
+#minesweeper {
+  display: grid;
+
+  justify-self: center;
+
+  height: 20rem;
+  width: 20rem;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // grid-template-rows: 1fr 1fr 1fr;
 }
